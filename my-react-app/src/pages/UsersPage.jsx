@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchUsers } from "../api/index";
-import Users from "../Components/UsersAlbums";
+import UsersAlbums from "../Components/UsersAlbums";
 
 export default function UsersPage() {
   const [users, setUsers] = useState([]);
@@ -14,7 +14,7 @@ export default function UsersPage() {
     getUsers();
   }, []);
 
-  const listUsers = users.map(user => <Users key={user.id} item={user} />);
+  const listUsers = users.map(user => <UsersAlbums key={user.id} item={user} />);
 
   return (
     <div>

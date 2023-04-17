@@ -15,7 +15,7 @@ export default function AlbumsPage() {
     getAlbums(params.id);
   });
 
-  const listAlbums = albums.map((album) => (
+  const listAlbums = albums.map(album => (
     <div>
       <div key={album.id}>{album.title}</div>
       <Link to={`/albums/photos/${album.id}`}>Photos album</Link>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchPhotos } from "../api/index"
-import UserPhotos from "../Components/AlbumsPhotos";
+import AlbumsPhotos from "../Components/AlbumsPhotos";
 
 export default function PhotosPage() {
   const [photos, setPhotos] = useState([]);
@@ -16,7 +16,7 @@ export default function PhotosPage() {
     getPhotos(params.id);
   });
 
-  const albumPhotos = photos.map(photo => <UserPhotos key={photo.id} item={photo} />);
+  const albumPhotos = photos.map(photo => <AlbumsPhotos key={photo.id} item={photo} />);
 
   return (
     <div>
