@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchUsers } from "../api/index";
 import Users from "../Components/UsersAlbums";
 
-export default function MainPage() {
+export default function UsersPage() {
   const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
