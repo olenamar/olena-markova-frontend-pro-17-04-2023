@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchPhotos } from "../api/index"
 import UserPhotos from "../Components/AlbumsPhotos";
 
-export default function AlbumsPage() {
+export default function PhotosPage() {
   const [photos, setPhotos] = useState([]);
   const params = useParams();
 
